@@ -3,13 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="shortcut icon" href="/static/icons/favicon.ico" />
+    <link rel="bookmark" href="/static/icons/favicon.ico" />
+    <title>圖文留言板</title>
   </head>
   <body>
-    <header><h1>發表一篇圖文</h1></header>
+    <header><h1>圖文留言板</h1></header>
     <main>
-      <section></section>
-      <section></section>
+      <h2>請發表一篇圖文留言</h2>
+      <section class="message-post">
+        <form class="message-form">
+          <div class="form-group">
+            <label for="message-text">文字內容：</label>
+            <input
+              type="text"
+              name="message-text"
+              class="message-text"
+              maxlength="100"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message-image">圖片檔案：</label>
+            <input
+              type="file"
+              name="message-image"
+              class="message-image"
+              accept="image/*"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <button type="submit">送出</button>
+          </div>
+        </form>
+      </section>
+      <section class="message-board"></section>
     </main>
+    <script src="/static/script.js"></script>
   </body>
 </html>
